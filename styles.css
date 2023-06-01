@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-size: 16px;
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-container{
+    width: 600px;
+    height: 450px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+/* Container 1 Styling */
+#container1{
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+h1{
+    color: hsl(179, 62%, 43%);
+}
+
+#container1 > h2{
+    color: hsl(71, 73%, 54%);
+    margin-top: 20px;
+}
+
+#container1 > p{
+    color: hsl(218, 22%, 67%);
+    margin-top: 10px;
+}
+
+/* Container 2 Styling */
+#container2{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+/* Sub-Container 1 Styling */
+#sub-container1{
+    background-color: hsla(179, 62%, 43%, 0.9);
+    padding: 30px;
+    border-radius: 0px 0px 0px 10px;
+}
+
+#sub-container1 > h2, #sub-container1 > p, #sub-container1 span:first-of-type{
+    color: white;
+}
+
+#price{
+    margin-top: 10px;
+}
+
+#price > span:first-of-type{
+    font-size: 30px;
+}
+
+#price > span:nth-of-type(2) {
+    vertical-align: top;
+}
+
+#sub-container1 span:nth-of-type(2){
+    color:hsla(204, 43%, 93%,0.8);
+}
+
+#sub-container1 > p {
+    margin-top: 10px;
+}
+a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0px 0px 5px 1px;
+    border-radius: 10px;
+}
+
+/* Sub-Container 2 Styling */
+#sub-container2{
+    background-color: hsla(179, 62%, 43%, 0.6);
+    color: white;
+    padding: 30px;
+    border-radius: 0px 0px 10px 0px;
+}
+
+ul{
+    list-style: none;
+    margin-top: 10px;
+}
+
+/* Mobile Layout*/
+@media (max-width: 500px) {
+    body{
+        width: 100vw;
+    }
+
+    #main-container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.33fr 0.66fr;
+        width: 90vw;
+        height: auto;
+    }
+
+    #container2{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    #sub-container1{
+        border-radius: 0px;
+    }
+
+    #sub-container2{
+        border-radius: 0px 0px 10px 10px;
+    }
+}
